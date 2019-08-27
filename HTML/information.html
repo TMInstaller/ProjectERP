@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+
+<html ng-app="ProjectApp">
+
+<head>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" />
+  <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+  <link href="input" type='text/css' rel="stylesheet" />
+  <link href="/navigationbar" type='text/css' rel="stylesheet" media="(min-width:900px)" />
+  <link href="/navigationbar2" type='text/css' rel="stylesheet" media="(max-width:900px)" />
+  <script type="text/javascript" src="/client.js"></script>
+</head>
+
+<body>
+  <div class="topbar">
+    <ul>
+      <li><a>기준정보</a>
+        <ul>
+          <li><a onclick="location.href='/accountInquiry'">거래처관련정보</a></li>
+          <li><a>상자제품관련정보</a></li>
+          <li><a>자재관련정보</a></li>
+          <li><a>원단관련정보</a></li>
+          <li><a>납품지역정보</a></li>
+          <li><a>납품처정보</a></li>
+          <li><a>운반비관련정보</a></li>
+          <li><a>차량관련정보</a></li>
+          <li><a>원단단가정보</a></li>
+          <li><a>상자단가정보</a></li>
+          <li><a>원단매입단가정보</a></li>
+          <li><a>상자매입단가정보</a></li>
+          <li><a>자재매입단가정보</a></li>
+        </ul>
+      </li>
+      <li><a>원단영업관리</a>
+        <ul>
+          <li><a>원단수주관리</a></li>
+          <li><a>원단미작업관리</a></li>
+          <li><a>원단정보관리</a></li>
+        </ul>
+      </li>
+      <li><a>상자영업관리</a>
+        <ul>
+          <li><a>수주관리</a></li>
+          <li><a>미계획관리</a></li>
+          <li><a>정보관리</a></li>
+        </ul>
+      </li>
+      <li><a>매출관리</a>
+        <ul>
+          <li><a>출하지시관리</a></li>
+          <li><a>매출전표관리</a></li>
+          <li><a>인수증관리</a></li>
+          <li><a>운반비정산관리</a></li>
+          <li><a>매출이월관리</a></li>
+          <li><a>원단단가마감관리</a></li>
+          <li><a>상자단가마감관리</a></li>
+          <li><a>매출내역관리</a></li>
+          <li><a>운반비내역관리</a></li>
+          <li><a>세금계산서관리</a></li>
+        </ul>
+      </li>
+      <li><a>원단생산관리</a>
+        <ul>
+          <li><a>소요량관리</a></li>
+          <li><a>원단작업계획관리</a></li>
+          <li><a>원단미생산관리</a></li>
+          <li><a>생산등록관리</a></li>
+          <li><a>재고폐기관리</a></li>
+          <li><a>재고관리</a></li>
+        </ul>
+      </li>
+      <li><a>상자생산관리</a>
+        <ul>
+          <li><a>상자작업계획관리</a></li>
+          <li><a>미생산관리</a></li>
+          <li><a>생산일보관리</a></li>
+          <li><a>제품상자폐기관리</a></li>
+          <li><a>재공품원단폐기관리</a></li>
+          <li><a>제품상자재고관리</a></li>
+          <li><a>재공품원단재고관리</a></li>
+          <li><a>수불관리(상자)</a></li>
+          <li><a>수불관리(재공품)</a></li>
+        </ul>
+      </li>
+      <li><a>구매관리</a>
+        <ul>
+          <li><a>원단매입관리</a></li>
+          <li><a>상자매입관리</a></li>
+          <li><a>부자재관리</a></li>
+          <li><a>원자재관리</a></li>
+          <li><a>외주매입관리</a></li>
+        </ul>
+      </li>
+      <li><a>경영정보</a>
+        <ul>
+          <li><a>영업관리</a></li>
+          <li><a>생산관리</a></li>
+          <li><a>자재관리</a></li>
+          <li><a>일일보고관리</a></li>
+          <li><a>종합관리</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div class="menu">
+    <input type="checkbox" id="menuicon">
+    <label for="menuicon">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+    <div class="sidebar">
+      <nav class="nav" role="navigation">
+        <ul class="nav__list">
+          <li>
+            <input id="group-1" type="checkbox" hidden />
+            <label for="group-1"><span class="fa fa-angle-right"></span> 기준정보</label>
+            <ul class="group-list">
+              <li><a href="#">거래처관련정보</a></li>
+              <li><a href="#">상자제품관련정보</a></li>
+              <li><a href="#">자재관련정보</a></li>
+              <li><a href="#">원단관련정보</a></li>
+              <li><a href="#">납품지역정보</a></li>
+              <li><a href="#">납품처정보</a></li>
+              <li><a href="#">운반비관련정보</a></li>
+              <li><a href="#">차량관련정보</a></li>
+              <li><a href="#">원단단가정보</a></li>
+              <li><a href="#">상자단가정보</a></li>
+              <li><a href="#">원단매입단가정보</a></li>
+              <li><a href="#">상자매입단가정보</a></li>
+              <li><a href="#">자재매입단가정보</a></li>
+            </ul>
+          </li>
+          <li>
+            <input id="group-2" type="checkbox" hidden />
+            <label for="group-2"><span class="fa fa-angle-right"></span>원단영업관리</label>
+            <ul class="group-list">
+              <li><a href="#">원단수주관리</a></li>
+              <li><a href="#">원단미작업관리</a></li>
+              <li><a href="#">원단정보관리</a></li>
+            </ul>
+          </li>
+          <li>
+            <input id="group-3" type="checkbox" hidden />
+            <label for="group-3"><span class="fa fa-angle-right"></span> 상자영업관리</label>
+            <ul class="group-list">
+              <li><a href="#">수주관리</a></li>
+              <li><a href="#">미계획관리</a></li>
+              <li><a href="#">정보관리</a></li>
+            </ul>
+          </li>
+          <li>
+            <input id="group-4" type="checkbox" hidden />
+            <label for="group-4"><span class="fa fa-angle-right"></span> 매출관리</label>
+            <ul class="group-list">
+              <li><a href="#">출하지시관리</a></li>
+              <li><a href="#">매출전표관리</a></li>
+              <li><a href="#">인수증관리</a></li>
+              <li><a href="#">운반비정산관리</a></li>
+              <li><a href="#">매출이월관리</a></li>
+              <li><a href="#">원단단가마감관리</a></li>
+              <li><a href="#">상자단가마감관리</a></li>
+              <li><a href="#">매출내역관리</a></li>
+              <li><a href="#">운반비내역관리</a></li>
+              <li><a href="#">세금계산서관리</a></li>
+            </ul>
+          </li>
+          <li>
+            <input id="group-5" type="checkbox" hidden />
+            <label for="group-5"><span class="fa fa-angle-right"></span> 원단생산관리</label>
+            <ul class="group-list">
+              <li><a href="#">소요량관리</a></li>
+              <li><a href="#">원단작업계획관리</a></li>
+              <li><a href="#">원단미생산관리</a></li>
+              <li><a href="#">생산등록관리</a></li>
+              <li><a href="#">재고폐기관리</a></li>
+              <li><a href="#">재고관리</a></li>
+            </ul>
+          </li>
+          <li>
+            <input id="group-6" type="checkbox" hidden />
+            <label for="group-6"><span class="fa fa-angle-right"></span> 상자생산관리</label>
+            <ul class="group-list">
+              <li><a href="#">상자작업계획관리</a></li>
+              <li><a href="#">미생산관리</a></li>
+              <li><a href="#">생산일보관리</a></li>
+              <li><a href="#">제품상자폐기관리</a></li>
+              <li><a href="#">재공품원단폐기관리</a></li>
+              <li><a href="#">제품상자재고관리</a></li>
+              <li><a href="#">재공품원단재고관리</a></li>
+              <li><a href="#">수불관리(상자)</a></li>
+              <li><a href="#">수불관리(재공품)</a></li>
+            </ul>
+          </li>
+          <li>
+            <input id="group-7" type="checkbox" hidden />
+            <label for="group-7"><span class="fa fa-angle-right"></span> 구매관리</label>
+            <ul class="group-list">
+              <li><a href="#">원단매입관리</a></li>
+              <li><a href="#">상자매입관리</a></li>
+              <li><a href="#">부자재관리</a></li>
+              <li><a href="#">원자재관리</a></li>
+              <li><a href="#">외주매입관리</a></li>
+            </ul>
+          </li>
+          <li>
+            <input id="group-8" type="checkbox" hidden />
+            <label for="group-8"><span class="fa fa-angle-right"></span> 경영정보</label>
+            <ul class="group-list">
+              <li><a href="#">영업관리</a></li>
+              <li><a href="#">생산관리</a></li>
+              <li><a href="#">자재관리</a></li>
+              <li><a href="#">일일보고관리</a></li>
+              <li><a href="#">종합관리</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <div ng-controller='buckketList'>
+
+  </div>
+</body>
+
+</html>

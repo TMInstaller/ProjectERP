@@ -1,0 +1,29 @@
+input[type=button], input[type=submit], input[type=reset] {
+    background-color: black;
+    z-index:-100;
+    border-radius: 4px;
+    color: white;
+    border : 1px solid black;
+    padding : 5px 5px;
+    cursor: pointer;
+}
+
+input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover {
+    background-color: green;
+    border-radius: 4px;
+    opacity:.8;
+    color: white;
+    border : 1px solid green;
+    padding : 5px 5px;
+    cursor: pointer;
+}
+select {
+    border-radius: 4px;
+}
+input[type=text]:focus, input[type=password]:focus {
+    border: 2px solid #128BE2;
+    border-radius: 4px;
+}
+input[type=text], input[type=password],input[type=date]{
+    border-radius:4px;
+}

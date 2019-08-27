@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html ng-app='ProjectApp'>
+
+<head>
+  <style>
+    h1 {
+      color: black;
+      text-align: center;
+      border-bottom: 4px solid black;
+      text-size-adjust: 40px;
+    }
+
+    h2 {
+      margin: auto;
+      width: 5%;
+    }
+  </style>
+  <title>Login</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+  <link href="/input" type='text/css' rel="stylesheet" />
+  <link href="/navigationbar" type='text/css' rel="stylesheet" media="(min-width:900px)" />
+  <link href="/navigationbar2" type='text/css' rel="stylesheet" media="(max-width:900px)" />
+
+  <script type="text/javascript" src="/client.js"></script>
+</head>
+
+<body>
+
+  <div ng-controller='loginControl'>
+    <p>
+      <h1>Login</h1>
+    </p>
+    <p>
+      <h2><input type="text" placeholder="EmployeeNumber" maxlength="8" ng-model="ID"
+          onkeypress='return (event.charCode >= 48 && event.charCode <= 57) || (event.charCode == 8) || (event.charCode == 9) || (event.charCode == 13) || (event.charCode == 16) || (event.charCode == 37) || (event.charCode == 39) || (event.charCode == 116)'>
+      </h2>
+    </p>
+    <p>
+      <h2><input type="password" placeholder="Password" ng-model="PW"></h2>
+    </p>
+    <p>
+      <h2><input type="button" value="Login" ng-click="login()" ng-disabled="switch" /></h2>
+      <h2><input type="button" value="Register" onclick="location.href = '/inform'" /></h2>
+      <h2><input type="button" visible value="Forgot Password?" ng-show="Vis" onclick="location.href='/'" /></h2>
+    </p>
+  </div>
+</body>
+
+</html>
