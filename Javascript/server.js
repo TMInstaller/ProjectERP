@@ -21,7 +21,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 /* Files */
 
-var location = "C:/Users/백동열/Desktop/2019_08_19"
+var location = "C:/Users/백동열/Desktop/ProjectERP"
 
 
 app.get('/menubar', function (req, res) {
