@@ -21,7 +21,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 /* Files */
 
-var location = "C:/Users/백동열/Desktop/2019_08_19"
+/* 2019-08-27 MonicLSH가 수정함 */
+var location = "C:/Users/백동열/Desktop/ProjectERP"
 
 
 app.get('/menubar', function (req, res) {
